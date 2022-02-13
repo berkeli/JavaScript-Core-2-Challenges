@@ -71,6 +71,7 @@ renderTweets = () => {
         tweetRow.appendChild(tweetCol)
         tweetRow.appendChild(buttonCol)
         newTweet.appendChild(tweetRow)
+        
         document.getElementById('tweet-container').appendChild(newTweet)
         tweetInput.value = ''
     })
