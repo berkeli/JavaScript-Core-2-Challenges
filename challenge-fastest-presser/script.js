@@ -7,6 +7,8 @@ const startGame = (seconds) => {
   document.addEventListener("keypress", keyBoardEvents);
   keyPresses.l = 0;
   keyPresses.s = 0;
+  document.getElementById('l-box').style.backgroundColor = 'white'
+  document.getElementById('s-box').style.backgroundColor =  'white'
   document.getElementById('s-count').innerText = keyPresses.s;
   document.getElementById('l-count').innerText = keyPresses.l;
   document.getElementById('s-winner').innerText = ' ';
@@ -15,10 +17,10 @@ const startGame = (seconds) => {
     document.removeEventListener('keypress', keyBoardEvents, false)
     if(keyPresses.l > keyPresses.s) {
       document.getElementById('l-box').style.backgroundColor = 'green'
-      document.getElementById('s-winner').innerText = 'Player one wins!';
+      document.getElementById('l-winner').innerText = 'Player two wins!';
     } else if (keyPresses.l < keyPresses.s){
       document.getElementById('s-box').style.backgroundColor = 'green'
-      document.getElementById('s-winner').innerText = 'Player two wins!';
+      document.getElementById('s-winner').innerText = 'Player one wins!';
     } else {
       document.getElementById('s-winner').innerText = 'It\'s a draw';
       document.getElementById('l-winner').innerText = 'It\'s a draw';
